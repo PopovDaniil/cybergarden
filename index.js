@@ -7,6 +7,7 @@ import handlebars from "handlebars";
 import databasePlugin from "./plugins/database.plugin.js";
 import mainRoute from "./routes/main.route.js"
 import authRoute from "./routes/auth.route.js";
+import accountRoute from "./routes/account.route.js";
 
 fastify()
 .register(fastifyStatic, {
@@ -23,5 +24,6 @@ fastify()
 .register(databasePlugin)
 .register(mainRoute)
 .register(authRoute)
+.register(accountRoute)
 
 .listen(3000)
