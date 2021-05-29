@@ -7,13 +7,18 @@ import eventModel from '../models/event.model.js'
  */
 async function events(fastify) {
 fastify
-    .get('/events', (_request, reply) => {
-        const events = eventModel.find()
-        reply.view('events')
+    .get('/events', async (_request, reply) => {
+        const events = await eventModel.find().lean()
+        reply.view('events', { events })
     })
-    .get('/event/test', (_request, reply) => {
-        (new eventModel({name: 'Test', description: 'Test'})).save();
-        reply.send("OK")
+    .get('/event/add', (_request, reply) => {
+        reply.view('create-event')
+    })
+    .post('/event/add', (request, reply) => {
+        console.log(request.body)
+        const event = new eventModel(request.body)
+        event.save()
+        reply.redirect('/events')
     })
 }
 

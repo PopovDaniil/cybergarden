@@ -1,0 +1,44 @@
+<div class="box">
+    <p class="box__text">Создание мероприятия</p>
+</div>
+
+<form class="form-conteiner" action="" method="POST">
+
+    <label class="form-conteiner__name">Наименование мероприятия
+        <input type="text" name="name">
+    </label>
+
+    <label class="form-conteiner__about">Описание мероприятия(до 400 символов)
+        <textarea rows="8" cols="35" name="description" maxlength="400"></textarea>
+    </label>
+
+    <label class="form-conteiner__stek">Стек технологий:
+        <input type="text" name="stack">
+    </label>
+
+    <label class="form-conteiner__geo">Место и дата проведения:
+        <input placeholder="место проведения" type="text" name="place">
+        <input placeholder="дата проведения" type="date" name="date">
+    </label>
+
+    <label>Уровень допускаемых участников:
+        <select class="form-conteiner__level" name="minLevel">
+            <option value="1">Junior</option>
+            <option value="2">Middle</option>
+            <option value="3">Senior</option>
+        </select>
+    </label>
+
+    <label class="form-conteiner__online"> Можно ли участвовать онлайн:
+        <input type="checkbox" name="online">
+    </label>
+
+    <label class="form-conteiner__age" na> Можно ли учавствовать несовершеннолетним:
+        <input type="checkbox" name="under18">
+    </label>
+
+    <div class="wrapper">
+        <button class="wrapper__create" type="submit">Создать</button>
+    </div>
+
+</form>
