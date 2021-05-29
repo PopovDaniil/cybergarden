@@ -1,5 +1,5 @@
 import plugin from 'fastify-plugin'
-import eventModel from '../models/event.model'
+import eventModel from '../models/event.model.js'
 
 /**
  * 
