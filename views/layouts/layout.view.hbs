@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/chief-slider.css">
+    <script src="/js/chief-slider.js"></script>
+    <script src="/js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>HackPlace</title>
-    <link rel="stylesheet" href="/main.css">
 </head>
+
 <body>
+    <header class="header-conteiner">
+
+        <div class="header-conteiner-Logo">
+            <!-- <img class="header-conteiner-LogoName__Logo" src="img/logo.jpg"> -->
+            <p class="header-conteiner-Logo__name">LOGO</p>
+        </div>
+
+        {{#if index}}
+        <nav class="header-conteiner-menu">
+
+            <div class="header-conteiner-menu__link">
+                <a href="#faq">FAQ</a>
+            </div>
+
+            <div class="header-conteiner-menu__link">
+                <a href="#top">TOP-events</a>
+            </div>
+
+            <div class="header-conteiner-menu__link">
+                <a href="#history">история</a>
+            </div>
+
+            <div class="header-conteiner-menu__link">
+                <a href="#about">о нас</a>
+            </div>
+
+            <div class="header-conteiner-menu__link">
+                <a href="#invest">наши спонсоры</a>
+            </div>
+
+            <div class="header-conteiner-menu__link">
+                <a href="#contacts">контакты</a>
+            </div>
+
+            {{/if}}
+        </nav>
+        <img class="header-conteiner__login" src="/img/login.svg" alt="">
+    </header>
+
+    <form class="conteiner">
+        <label class="conteiner__login">Логин<input type="text" name="" id="login"></label>
+        <label class="conteiner__password">Пароль<input type="text" name="" id="password"></label>
+        <div class="conteiner__btn"><button type="submit">Войти</button></div>
+        <a class="conteiner__link" href="/register">нет аккаунта? зарегистрируйтесь!</a>
+    </form>
     {{{body}}}
+
+    <footer>
+        Все права защищены<br>2021
+    </footer>
 </body>
+
 </html>

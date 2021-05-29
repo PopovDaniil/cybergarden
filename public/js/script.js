@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
       loop: true,
       autoplay: true,
       interval: 3000
-    });
+    }) ?? null;
 
     /* выпадающее меню входа */
     let btn = document.querySelector(".header-conteiner__login");
@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function () {
         menu.classList.toggle("show");
     })
+
+  let membersForm = document.querySelector('#members')
+  let organizersForm = document.querySelector('#organizers')
+
 
   });
 

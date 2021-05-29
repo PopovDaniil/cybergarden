@@ -13,7 +13,7 @@ async function auth(fastify) {
             secret: 'gt2&hjk0axokj5__e3fjioksjgfdbckpdl'
         })
         .get('/register', (_request, reply) => {
-            reply.view('register')
+            reply.view('register', {menu: false})
         })
         .get('/login', (_request, reply) => {
             reply.view('login')
@@ -37,7 +37,7 @@ async function auth(fastify) {
             }
         }, (request, reply) => {
             console.log(request.body)
-            const user = new userModel()
+            const user = new userModel(request.body)
             user.save()
             reply.redirect('/')
         })

@@ -1,2 +1,105 @@
-<h1>Main page</h1>
-{{content}}
+<main class="main-conteiner">
+
+    <section class="main-conteiner-section">
+        <header class="main-conteiner-section__header" id="faq">
+            Что такое хакатон?
+        </header>
+        <p class="main-conteiner-section__text">
+            Хакатон (англ. hackathon от hacker «хакер» + marathon «марафон») — форум для разработчиков, во время
+            которого специалисты из разных областей разработки программного обеспечения (программисты, дизайнеры,
+            менеджеры) сообща решают какую-либо проблему на время.
+        </p>
+    </section>
+
+    <section class="main-conteiner-section">
+        <header class="main-conteiner-section__header" id="top">
+            TOP-events
+        </header>
+
+        <div class="container">
+
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__items">
+                        <div class="slider__item">
+                            <img src="/img/image10.png" alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img src="/img/image11.png" alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img src="/img/image12.png" alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img src="/img/image13.png" alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img src="/img/image14.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="slider__control" data-slide="prev"></a>
+                <a href="#" class="slider__control" data-slide="next"></a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="main-conteiner-section">
+        <header class="main-conteiner-section__header" id="history">
+            История
+        </header>
+        {{#each events}}
+        <div class="main-conteiner-section-box">
+            <img class="main-conteiner-section-box__img" src="img/image12.png" alt="">
+            <div class="main-conteiner-section-box-content">
+                <p class="main-conteiner-section-box-content__headText">{{name}}</p>
+                <p class="main-conteiner-section-box-content__text">{{description}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </section>
+
+    <section class="main-conteiner-section">
+        <header class="main-conteiner-section__header" id="about">
+            О нас
+        </header>
+        <p class="main-conteiner-section__text">
+            Мы помогаем программистам стать участниками хакатонов, а организаторам найти своих участников!
+        </p>
+    </section>
+
+    <section class="main-conteiner-section">
+        <header class="main-conteiner-section__header" id="invest">
+            Наши спонсоры
+        </header>
+        <div class="main-conteiner-section-invest">
+            <img class="main-conteiner-section-invest__img" src="img/image10.png" alt="">
+            <img class="main-conteiner-section-invest__img" src="img/image11.png" alt="">
+            <img class="main-conteiner-section-invest__img" src="img/image12.png" alt="">
+            <img class="main-conteiner-section-invest__img" src="img/image13.png" alt="">
+            <img class="main-conteiner-section-invest__img" src="img/image14.png" alt="">
+        </div>
+    </section>
+
+    <section class="main-conteiner-section transparent-back contacts-col">
+        <header class="main-conteiner-section__header" id="contacts">
+            Контакты
+        </header>
+        <div class="contacts-row">
+            <img src="/img/VK_white.svg" alt="">
+            <img src="/img/Telegram_white.svg" alt="">
+            <img src="/img/Facebook_white.svg" alt="">
+        </div>
+        <table class="about">
+            <tr>
+                <td>Реклама:</td>
+                <td class="under">example1@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Техническая поддержка:</td>
+                <td class="under">example2@gmail.com</td>
+            </tr>
+        </table>
+    </section>
+</main>

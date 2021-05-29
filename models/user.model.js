@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
     level: Number,
     socialLink: String,
     githubLink: String,
+    stack: String,
     hacksCount: Number
 })
 

@@ -43,6 +43,9 @@ a{
     border: 2px solid white;
     margin-left: 2vw;
 }
+.header-conteiner-Logo__name {
+    margin: 16px 0px;
+}
 .header-conteiner__login{
     border-radius: 50%;
     width: 35px;
@@ -68,6 +71,9 @@ a{
 }
 .show{
     display: flex;
+}
+.hide {
+    display: none;
 }
 .conteiner__login, .conteiner__password, .conteiner__link, .conteiner__btn{
     display: flex;
@@ -136,7 +142,7 @@ a{
 .main-conteiner-section-box{
     text-align: justify;
     width: 60%;
-    margin: auto;
+    margin: 40px auto;
     line-height: 26px;
     display: flex;
     align-items: center;

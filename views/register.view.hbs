@@ -1,6 +1,100 @@
-<form action="" method="POST">
-    <label>Имя: <input type="text" name="user"></label>
-    <label>Логин: <input type="text" name="login"></label>
-    <label>Пароль:<input type="password" name="password"></label>
-    <button type="submit">Зарегистрироваться</button>
-</form>
+<link rel="stylesheet" href="/css/form.css">
+<div class="content">
+    <div class="user-is">
+        <span class="user-is__text" onclick="setForm(1)">
+            участник
+        </span>
+    </div>
+    <form class="spaces" id="members" method="POST" action="">
+        <div class="login">
+            <span class="login__login-text">Логин:</span> <br>
+            <input type="text" class="login__login-input" name="login">
+        </div>
+        <div class="pass">
+            <span class="pass__text">Пароль:</span> <br>
+            <input type="password" class="pass__input" name="password">
+        </div>
+        <div class="user-name">
+            <span class="user-name__text">Ваше ФИО:</span> <br>
+            <input type="text" class="user-name__input" name="name">
+        </div>
+        <div class="email">
+            <span class="email__text">Почта:</span> <br>
+            <input type="text" class="email__input" name="email">
+        </div>
+        <div class="user-level">
+            <span class="user-level__text">Уровень участника:</span> <br>
+            <select name="level" class="user-level__selector" name="level">
+                <option value="1">Junior</option>
+                <option value="2">Middle</option>
+                <option value="3">Senior</option>
+            </select>
+        </div>
+        <div class="social-net">
+            <span class="social-net__text">Ссылка на соц. сеть(вк или телеграм):</span> <br>
+            <input type="link" class="social-net__input" name="socialLink">
+        </div>
+        <div class="link-to-git">
+            <span class="link-to-git__text">Ссылка на ваш Github:</span> <br>
+            <input type="link" class="link-to-git__input" name="githubLink">
+        </div>
+        <div class="stack">
+            <span class="stack__text">Ваш стек технологий:</span> <br>
+            <input type="text" class="stack__input" name="stack">
+        </div>
+        <div class="amount-of-hacks">
+            <span class="amount-of-hacks__text">В скольких хакатонах вы принимали участие:</span> <br>
+            <input type="number" class="amount-of-hacks__input" name="hacksCount">
+        </div>
+        <button class="conflirm" type="submit">Зарегистрироваться</button>
+    </form>
+
+    <div class="user-is">
+        <span class="user-is__text" onclick="setForm(0)">
+            организатор
+        </span>
+    </div>
+    <form class="spaces hide" id="organizers">
+        <div class="login">
+            <span class="login__login-text">Логин:</span> <br>
+            <input type="text" class="login__login-input">
+        </div>
+        <div class="pass">
+            <span class="pass__text">Пароль:</span> <br>
+            <input type="password" class="pass__input">
+        </div>
+        <div class="user-name">
+            <span class="user-name__text">ФИО представителя:</span> <br>
+            <input type="text" class="user-name__input">
+        </div>
+        <div class="company">
+            <span class="company__text">Компания:</span> <br>
+            <input type="text" class="company__input">
+        </div>
+        <div class="company-site">
+            <span class="company-site__text">Сайт компании:</span> <br>
+            <input type="text" class="company-site__input">
+        </div>
+        <div class="amount-of-staff">
+            <span class="amount-of-staff__text">Количество сотрудников:</span> <br>
+            <input type="link" class="amount-of-staff__input">
+        </div>
+        <div class="main-office">
+            <span class="main-office__text">Офис компании:</span> <br>
+            <select name="#" class="main-office__selector">
+                <option>Выбрать город</option>
+                <option>Краснодар</option>
+                <option>Москва</option>
+                <option>Ростов-на-Дону</option>
+                <option>Таганрог</option>
+                <option>Другой</option>
+
+            </select>
+        </div>
+        <div class="stack">
+            <span class="stack__text">Стек компании:</span> <br>
+            <input type="text" class="stack__input">
+        </div>
+        <button class="conflirm" type="submit">Зарегистрироваться</button>
+    </form>
+</div>
