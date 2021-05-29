@@ -1,9 +1,16 @@
 import plugin from 'fastify-plugin'
+import userModel from '../models/user.model.js'
 
+/**
+ * 
+ * @param {import('fastify').FastifyInstance} fastify
+ */
 async function account(fastify) {
     fastify
     .get('/account', (request, reply) => {
-        reply.view('account')
+        const userId = request.session.get('_id')
+        const user = userModel.findById(userId)
+        reply.view('account', user) 
     })
 }
 
