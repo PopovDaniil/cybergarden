@@ -28,4 +28,4 @@ fastify()
 .register(accountRoute)
 .register(eventsRoute)
 
-.listen(3000)
+.listen(process.env.PORT || 3000)
