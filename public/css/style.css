@@ -1,0 +1,222 @@
+body{
+    margin: auto;
+    color: #E4CCDB;
+    font-family: 'Rubik', sans-serif;
+    background-color: #485063;
+    background-image: url(../img/fon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    letter-spacing: 2px;
+}
+
+.header-conteiner{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #221B2F;
+    font-size: 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.header-conteiner-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.header-conteiner-menu__link{
+    padding: 0vw 2vw 0vw 2vw;
+    min-width: 50px;
+}
+.header-conteiner-menu__link > a:hover{
+    text-decoration: underline 1px solid #E4CCDB ;
+}
+a{
+    text-decoration: none;
+    color: #E4CCDB;
+}
+.header-conteiner-Logo{
+    border: 2px solid white;
+    margin-left: 2vw;
+}
+.header-conteiner__login{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 2vw;
+}
+.header-conteiner__login:hover{
+    cursor: pointer;
+    background: #fc0;
+    box-shadow: 0 0 5px 2px;
+}
+.conteiner{
+    width: 250px;
+    border: 1px solid black;
+    position: fixed;
+    right: 0px;
+    top: 65px;
+    font-size: 18px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #32202B;
+    display: none;
+}
+.show{
+    display: flex;
+}
+.conteiner__login, .conteiner__password, .conteiner__link, .conteiner__btn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 5px;
+}
+.conteiner__login > input, .conteiner__password > input{
+    height: 30px;
+    margin-top: 5px;
+}
+.conteiner__btn > button{
+    width: 110px;
+    background-color: rgb(11, 163, 69);
+    border-radius: 5px;
+    font-size: 18px;
+}
+.conteiner__btn > button:hover{
+    cursor: pointer;
+    background: rgb(8, 131, 45);
+    box-shadow: 0 0 5px 2px;
+}
+.main-conteiner{
+    padding-top: 55px;
+}
+.main-conteiner-section{
+    margin: 40px auto;
+}
+.main-conteiner-section__header{
+    font-size: 24px;
+    padding-bottom: 30px;
+    text-align: center !important;
+}
+.main-conteiner-section__text, .main-conteiner-section__header{
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    line-height: 30px;
+    text-indent: 1.5em;
+}
+
+/* слайдер */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.slider__wrapper {
+    overflow: hidden;
+}
+.slider__item {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,255,255, 0.8);
+    font-size: 7rem;
+}
+.main-conteiner-section-box{
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-conteiner-section-box__img{
+    width: 50%;
+}
+.main-conteiner-section-box-content{
+    width: 45%;
+}
+.main-conteiner-section-box-content__headText{
+    font-size: 18px;
+    margin-top: 0px !important;
+}
+.main-conteiner-section-box-content__text{
+    text-indent: 1.5em;
+}
+.main-conteiner-section-invest{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-conteiner-section-invest__img{
+    margin: 10px 10px;
+}
+
+.transparent-back {
+    background: rgba(196, 196, 196, 0.28);
+}
+
+.contacts-row {
+    display: flex;
+    height: 48px;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    min-width: 200px;
+}
+
+.contacts-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.about {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about tr {
+    line-height: 32px;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #3E3F54;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    padding-bottom: 15px;
+}
+/* медиа запросы для слайдера */
+@media (min-width: 768px) {
+    .slider__item {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+@media (min-width: 1200px) {
+.slider__item {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+}
+}
