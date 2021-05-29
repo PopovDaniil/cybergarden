@@ -1,4 +1,4 @@
-body{
+.global{
     margin: auto;
     color: #E4CCDB;
     font-family: 'Rubik', sans-serif;
@@ -80,13 +80,17 @@ a{
     margin-top: 5px;
     background-color: #C4C4C4;
 }
-.conteiner__btn > button{
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.conteiner__btn > button, .wrapper__create{
     width: 110px;
     background-color: rgb(11, 163, 69);
     border-radius: 5px;
     font-size: 18px;
 }
-.conteiner__btn > button:hover{
+.conteiner__btn > button, .wrapper__create:hover{
     cursor: pointer;
     background: rgb(8, 131, 45);
     box-shadow: 0 0 5px 2px;
@@ -165,6 +169,7 @@ a{
 }
 .main-conteiner-section-invest__img{
     margin: 10px 10px;
+    /* border-radius: 100%; */
 }
 
 .transparent-back {
@@ -208,6 +213,53 @@ footer {
     text-align: center;
     padding-bottom: 15px;
 }
+
+/* форма для регистрации мероприятия */
+.box{
+    display: flex;
+    text-align: center;
+    background-color: #36213E;
+    width: 300px;
+    padding: 15px 15px;
+    margin: auto;
+    color: #E4CCDB;
+    font-family: 'Rubik', sans-serif;
+    
+}
+.box__text{
+    margin: auto;
+}
+.form-conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+.form-conteiner__name, .form-conteiner__about, .form-conteiner__stek, .form-conteiner__geo, .form-conteiner__online, .form-conteiner__age{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #E4CCDB;
+}
+.form-conteiner__name > input, .form-conteiner__stek > input, .form-conteiner__geo > input, .form-conteiner__level > option, .form-conteiner__online > input, .form-conteiner__age > input{
+    height: 30px;
+}
+.form-conteiner__name > input, .form-conteiner__about > textarea, .form-conteiner__stek > input, .form-conteiner__geo > input, .form-conteiner__online > input, .form-conteiner__age > input{
+    margin-top: 10px;
+    background-color: #C4C4C4;
+    font-size: 18px;
+}
+.form-conteiner__online > input, .form-conteiner__age > input{
+    width: 25px;
+}
+.form-conteiner__level{
+    background-color: #C4C4C4;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
 /* медиа запросы для слайдера */
 @media (min-width: 768px) {
     .slider__item {
