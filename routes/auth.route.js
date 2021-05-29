@@ -13,7 +13,7 @@ async function auth(fastify) {
             secret: 'gt2&hjk0axokj5__e3fjioksjgfdbckpdl'
         })
         .get('/register', (_request, reply) => {
-            reply.view('register', {menu: false})
+            reply.view('register', { menu: false })
         })
         .get('/login', (_request, reply) => {
             reply.view('login')
@@ -43,26 +43,29 @@ async function auth(fastify) {
         })
         .post('/login', {
             schema: {
-                type: 'object',
-                required: ['login', 'password'],
-                properties: {
-                    login: { type: 'string'},
-                    password: { type: 'string' }
+                body: {
+                    type: 'object',
+                    required: ['login', 'password'],
+                    properties: {
+                        login: { type: 'string' },
+                        password: { type: 'string' }
+                    }
                 }
             }
-        }, (request, reply) => {
+        }, async (request, reply) => {
             const { login, password } = request.body;
-            const user = userModel.findOne({ login, password })
+            const user = await userModel.findOne({ login, password }).lean()
+            console.log(user);
             if (user) {
-                request.session.set('_id',user.id)
+                request.session.set('_id', user.id)
                 reply.redirect('/account')
             } else {
-                reply.redirect('/login')
+                reply.redirect('/')
             }
         })
         .get('/logout', (request, reply) => {
             request.session.delete()
-            reply.redirect('/')  
+            reply.redirect('/')
         })
 }
 

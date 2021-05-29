@@ -197,6 +197,10 @@ a{
     margin-bottom: 0;
 }
 
+.content {
+    margin: 100px auto 50px;
+}
+
 .about {
     max-width: 900px;
     margin: auto;
