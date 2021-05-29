@@ -56,14 +56,15 @@
         <img class="header-conteiner__login" src="/img/login.svg" alt="" onclick="toggleDropdown()">
     </header>
 
-    <form class="conteiner">
-        <label class="conteiner__login">Логин<input type="text" name="" id="login"></label>
-        <label class="conteiner__password">Пароль<input type="text" name="" id="password"></label>
+    <form class="conteiner" method="POST" action="/login">
+        <label class="conteiner__login">Логин<input type="text" name="login"></label>
+        <label class="conteiner__password">Пароль<input type="password" name="password"></label>
         <div class="conteiner__btn"><button type="submit">Войти</button></div>
         <a class="conteiner__link" href="/register">нет аккаунта? зарегистрируйтесь!</a>
     </form>
-    {{{body}}}
-
+    <div class="content">
+        {{{body}}}
+    </div>
     <footer>
         Все права защищены<br>2021
     </footer>
