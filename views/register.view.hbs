@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="/css/form.css">
 <div class="content">
-    <div class="user-is">
-        <span class="user-is__text" onclick="setForm(1)">
-            участник
-        </span>
-    </div>
     <form class="spaces" id="members" method="POST" action="">
+        <div class="user-is">
+            <span class="user-is__text" onclick="setForm(1)">
+                Участник
+            </span>
+        </div>
         <div class="login">
             <span class="login__login-text">Логин:</span> <br>
             <input type="text" class="login__login-input" name="login">
@@ -49,12 +49,13 @@
         <button class="conflirm" type="submit">Зарегистрироваться</button>
     </form>
 
-    <div class="user-is">
-        <span class="user-is__text" onclick="setForm(0)">
-            организатор
-        </span>
-    </div>
+
     <form class="spaces hide" id="organizers">
+        <div class="user-is">
+            <span class="user-is__text" onclick="setForm(0)">
+                Организатор
+            </span>
+        </div>
         <div class="login">
             <span class="login__login-text">Логин:</span> <br>
             <input type="text" class="login__login-input">

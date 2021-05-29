@@ -1,4 +1,4 @@
-.global{
+body{
     margin: auto;
     color: #E4CCDB;
     font-family: 'Rubik', sans-serif;
@@ -218,6 +218,10 @@ footer {
     align-items: flex-end;
     text-align: center;
     padding-bottom: 15px;
+}
+
+[onclick] {
+    cursor: pointer;
 }
 
 /* форма для регистрации мероприятия */
