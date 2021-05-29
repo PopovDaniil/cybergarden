@@ -78,6 +78,7 @@ a{
 .conteiner__login > input, .conteiner__password > input{
     height: 30px;
     margin-top: 5px;
+    background-color: #C4C4C4;
 }
 .conteiner__btn > button{
     width: 110px;
