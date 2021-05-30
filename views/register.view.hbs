@@ -45,46 +45,55 @@
         </div>
         <div class="amount-of-hacks">
             <span class="amount-of-hacks__text">В скольких хакатонах вы принимали участие:</span> <br>
-            <input type="number" class="amount-of-hacks__input" name="hacksCount">
+            <select type="number" class="amount-of-hacks__input" name="hacksCount">
+                <option value="1-2">1-2</option>
+                <option value="3-5">3-5</option>
+                <option value="6-10">6-10</option>
+            </select>
         </div>
         <button class="conflirm" type="submit">Зарегистрироваться</button>
     </form>
 
 
-    <form class="spaces hide" id="organizers">
+    <form class="spaces hide" id="organizers" method="POST">
         <div class="user-is">
             <span class="user-is__text" onclick="setForm(0)">
                 Организатор
             </span>
         </div>
-        <div onclick="setForm()">Я организатор</div>
+        <div onclick="setForm()">Я участник</div>
         <div class="login">
-            <span class="login__login-text">Логин:</span> <br>
-            <input type="text" class="login__login-input">
+            <span class="login__login-text" id="login">Логин:</span> <br>
+            <input type="text" class="login__login-input" name="login">
         </div>
         <div class="pass">
-            <span class="pass__text">Пароль:</span> <br>
-            <input type="password" class="pass__input">
+            <span class="pass__text" id="password">Пароль:</span> <br>
+            <input type="password" class="pass__input" name="password">
         </div>
         <div class="user-name">
-            <span class="user-name__text">ФИО представителя:</span> <br>
-            <input type="text" class="user-name__input">
+            <span class="user-name__text" id="contact" >ФИО представителя:</span> <br>
+            <input type="text" class="user-name__input" name="contact">
         </div>
         <div class="company">
-            <span class="company__text">Компания:</span> <br>
-            <input type="text" class="company__input">
+            <span class="company__text" id="company">Компания:</span> <br>
+            <input type="text" class="company__input" name="company">
         </div>
         <div class="company-site">
             <span class="company-site__text">Сайт компании:</span> <br>
-            <input type="text" class="company-site__input">
+            <input type="text" class="company-site__input" name="site">
         </div>
         <div class="amount-of-staff">
-            <span class="amount-of-staff__text">Количество сотрудников:</span> <br>
-            <input type="link" class="amount-of-staff__input">
+            <span class="amount-of-staff__text" id="">Количество сотрудников:</span> <br>
+            <select class="amount-of-staff__input" name="size">
+                <option value="1-4">1-4</option>
+                <option value="5-20">5-20</option>
+                <option value="21-100">21-100</option>
+                <option value=">100">>100</option>
+            </select>
         </div>
         <div class="main-office">
             <span class="main-office__text">Офис компании:</span> <br>
-            <select name="#" class="main-office__selector">
+            <select name="#" class="main-office__selector" name="city">
                 <option>Выбрать город</option>
                 <option>Краснодар</option>
                 <option>Москва</option>
@@ -96,7 +105,7 @@
         </div>
         <div class="stack">
             <span class="stack__text">Стек компании:</span> <br>
-            <input type="text" class="stack__input">
+            <input type="text" class="stack__input" name="stack">
         </div>
         <button class="conflirm" type="submit">Зарегистрироваться</button>
     </form>
