@@ -39,12 +39,17 @@ a{
     text-decoration: none;
     color: #E4CCDB;
 }
-.header-conteiner-Logo{
-    border: 2px solid white;
-    margin-left: 2vw;
+.header-conteiner-LogoName__Logo{
+    width: 40px;
+    content: url("../img/logo1.png");
 }
-.header-conteiner-Logo__name {
-    margin: 16px 0px;
+.header-conteiner-LogoName__Logo:hover{
+    content: url("../img/logo2.png");
+}
+.header-conteiner-Logo{
+    margin-left: 2vw;
+    display: flex;
+    align-items: center;
 }
 .header-conteiner__login{
     border-radius: 50%;
@@ -100,7 +105,6 @@ a{
 .conteiner__btn > button{
     cursor: pointer;
     background: #19172b;
-    
 }
 .wrapper__create:hover{
     box-shadow: 0 0 5px 2px;
