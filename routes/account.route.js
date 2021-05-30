@@ -7,10 +7,11 @@ import userModel from '../models/user.model.js'
  */
 async function account(fastify) {
     fastify
-    .get('/account', (request, reply) => {
+    .get('/account', async (request, reply) => {
         const userId = request.session.get('_id')
-        const user = userModel.findById(userId)
-        reply.view('account', user) 
+        const user = await userModel.findById(userId).lean()
+        console.log(user);
+        reply.view('account', { user }) 
     })
 }
 

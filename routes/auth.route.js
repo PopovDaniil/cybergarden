@@ -22,7 +22,7 @@ async function auth(fastify) {
             schema: {
                 body: {
                     type: 'object',
-                    required: ['login', 'password', 'name', 'email', 'level', 'socialLink', 'githubLink', 'hacksCount'],
+                    // required: ['login', 'password', 'name', 'email', 'level', 'socialLink', 'githubLink', 'hacksCount'],
                     properties: {
                         login: { type: 'string' },
                         password: { type: 'string' },
@@ -57,11 +57,12 @@ async function auth(fastify) {
             const user = await userModel.findOne({ login, password }).lean()
             console.log(user);
             if (user) {
-                request.session.set('_id', user.id)
+                request.session.set('_id', user._id)
                 reply.redirect('/account')
             } else {
                 reply.redirect('/')
             }
+            console.log(request.session);
         })
         .get('/logout', (request, reply) => {
             request.session.delete()

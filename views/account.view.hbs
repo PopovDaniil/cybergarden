@@ -1,1 +1,39 @@
-<h1>Account page</h1>
+{{#with user}}
+<div class="containerUser">
+    <img class="containerUser__login" src="img/login.svg" alt="">
+    <div class="containerName">
+        <p class="containerName__name">{{name}}</p>
+        <img onclick="edit()" class="containerName__siting" src="img/sit.svg" alt="">
+    </div>
+    <form>
+        <table data-edit="0">
+            <tbody>
+                <tr>
+                    <td>Уровень :</td>
+                    <td>{{ level }}</td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td>{{ email }}</td>
+                </tr>
+                <tr>
+                    <td>Ссылка на GitHub :</td>
+                    <td>{{ githubLink }}</td>
+                </tr>
+                <tr>
+                    <td>Ссылка на соц. сеть :</td>
+                    <td>{{ socialLink }}</td>
+                </tr>
+                <tr>
+                    <td>Стек разработки :</td>
+                    <td>{{ stack }}</td>
+                </tr>
+                <tr>
+                    <td>Количество хакатонов:</td>
+                    <td>{{ hacksCount }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+{{/with}}
