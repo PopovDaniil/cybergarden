@@ -236,6 +236,15 @@ footer {
     cursor: pointer;
 }
 
+.switch {
+    background-color: #ccc;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+
 /* форма для регистрации мероприятия */
 .box{
     display: flex;

@@ -22,7 +22,7 @@ async function auth(fastify) {
             schema: {
                 body: {
                     type: 'object',
-                    required: ['login', 'password', 'name', 'email', 'level', 'socialLink', 'githubLink', 'hacksCount'],
+                    // required: ['login', 'password', 'name', 'email', 'level', 'socialLink', 'githubLink', 'hacksCount'],
                     properties: {
                         login: { type: 'string' },
                         password: { type: 'string' },
