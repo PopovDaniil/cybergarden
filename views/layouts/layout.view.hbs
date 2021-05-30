@@ -55,13 +55,21 @@
         </nav>
         <img class="header-conteiner__login" src="/img/login.svg" alt="" onclick="toggleDropdown()">
     </header>
+    {{#if user._id}}
+    <div class="conteiner">
+        <div class="dropdown-user">
 
+        </div>
+        <a href="/logout">Выйти</a>
+    </div>
+    {{else}}
     <form class="conteiner" method="POST" action="/login">
         <label class="conteiner__login">Логин<input type="text" name="login"></label>
         <label class="conteiner__password">Пароль<input type="password" name="password"></label>
         <div class="conteiner__btn"><button type="submit">Войти</button></div>
         <a class="conteiner__link" href="/register">нет аккаунта? зарегистрируйтесь!</a>
     </form>
+    {{/if}}
     <div class="content">
         {{{body}}}
     </div>
