@@ -1,10 +1,16 @@
 import plugin from "fastify-plugin"
 import eventModel from "../models/event.model.js"
 
+/**
+ * 
+ * @param {import("fastify").FastifyInstance} fastify 
+ */
 async function index(fastify) {
-    fastify.get('/', async (_request, reply) => {
+    fastify.get('/', async (request, reply) => {
         const events = await eventModel.find().lean()
-        reply.view('index', { events, index: true })
+        const userId = await request.session.get('_id')
+        console.log(request.session);
+        reply.view('index', { events, index: true, userId })
     })
 }
 
