@@ -39,12 +39,17 @@ a{
     text-decoration: none;
     color: #E4CCDB;
 }
-.header-conteiner-Logo{
-    border: 2px solid white;
-    margin-left: 2vw;
+.header-conteiner-LogoName__Logo{
+    width: 40px;
+    content: url("../img/logo1.png");
 }
-.header-conteiner-Logo__name {
-    margin: 16px 0px;
+.header-conteiner-LogoName__Logo:hover{
+    content: url("../img/logo2.png");
+}
+.header-conteiner-Logo{
+    margin-left: 2vw;
+    display: flex;
+    align-items: center;
 }
 .header-conteiner__login{
     border-radius: 50%;
@@ -97,9 +102,11 @@ a{
     font-size: 18px;
     color:#E4CCDB ;
 }
-.conteiner__btn > button, .wrapper__create:hover{
+.conteiner__btn > button{
     cursor: pointer;
-    background: #221a5f;
+    background: #19172b;
+}
+.wrapper__create:hover{
     box-shadow: 0 0 5px 2px;
 }
 .main-conteiner{
@@ -269,7 +276,33 @@ footer {
 .form-conteiner__online > input, .form-conteiner__age > input{
     width: 25px;
 }
-
+.containerUser{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containerUser__login{
+    margin-top: 10px;
+    width: 100px;
+    border-radius: 50%;
+}
+.containerName{
+    display: flex;
+    justify-content: space-between;
+}
+.containerName__name{
+    font-size: 21px;
+}
+.containerName__siting{
+    width: 30px;
+    margin-left: 40px;
+}
+table{
+    margin-top: 3vw;
+}
+td{
+    padding: 10px;
+}
 /* медиа запросы для слайдера */
 @media (min-width: 768px) {
     .slider__item {

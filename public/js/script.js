@@ -1,21 +1,16 @@
-//слайдер
-document.addEventListener('DOMContentLoaded', function () {
-  const slider = new ChiefSlider('.slider', {
-    loop: true,
-    autoplay: true,
-    interval: 3000
-  }) ?? null;
-});
 
-function toggleDropdown() {
-  document.querySelector(".conteiner").classList.toggle("show");
+  function edit(){
+    let flag = document.querySelector("table").dataset.edit;
+    if(flag){
+      let array = document.querySelectorAll("td");
+      array.forEach(elem => {
+      let content = elem.innerHTML;
+      content.innerHTML = `<input type ='text' id='' value='${content}'>`;
+      });
+    } else {
+      let array = querySelectorAll("td");
+      array.forEach(elem => {
+        elem.innerHTML = elem.value;
+    })
+  }
 }
-
-function setForm(index) {
-  document.querySelector('#members').classList.toggle('hide')
-  document.querySelector('#organizers').classList.toggle('hide')
-}
-
-
-
-
