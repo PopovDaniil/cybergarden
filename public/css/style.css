@@ -276,7 +276,33 @@ footer {
 .form-conteiner__online > input, .form-conteiner__age > input{
     width: 25px;
 }
-
+.containerUser{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containerUser__login{
+    margin-top: 10px;
+    width: 100px;
+    border-radius: 50%;
+}
+.containerName{
+    display: flex;
+    justify-content: space-between;
+}
+.containerName__name{
+    font-size: 21px;
+}
+.containerName__siting{
+    width: 30px;
+    margin-left: 40px;
+}
+table{
+    margin-top: 3vw;
+}
+td{
+    padding: 10px;
+}
 /* медиа запросы для слайдера */
 @media (min-width: 768px) {
     .slider__item {
