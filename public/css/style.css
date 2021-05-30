@@ -95,6 +95,7 @@ a{
     background-color: #221b2f;
     border-radius: 5px;
     font-size: 18px;
+    color:#E4CCDB ;
 }
 .conteiner__btn > button, .wrapper__create:hover{
     cursor: pointer;
