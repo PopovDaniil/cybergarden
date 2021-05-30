@@ -249,7 +249,7 @@ footer {
     width: 60%;
     margin: auto;
 }
-.form-conteiner__name, .form-conteiner__about, .form-conteiner__stek, .form-conteiner__geo, .form-conteiner__online, .form-conteiner__age{
+.form-conteiner__name, .form-conteiner__about, .form-conteiner__stek, .form-conteiner__geo, .form-conteiner__level, .form-conteiner__online, .form-conteiner__age{
     display: flex;
     flex-direction: column;
     padding: 5px 5px;
@@ -257,21 +257,16 @@ footer {
     margin-top: 15px;
     color: #E4CCDB;
 }
-.form-conteiner__name > input, .form-conteiner__stek > input, .form-conteiner__geo > input, .form-conteiner__level > option, .form-conteiner__online > input, .form-conteiner__age > input{
+.form-conteiner__name > input, .form-conteiner__stek > input, .form-conteiner__geo > input, .form-conteiner__level > select, .form-conteiner__online > input, .form-conteiner__age > input{
     height: 30px;
 }
-.form-conteiner__name > input, .form-conteiner__about > textarea, .form-conteiner__stek > input, .form-conteiner__geo > input, .form-conteiner__online > input, .form-conteiner__age > input{
+.form-conteiner__name > input, .form-conteiner__about > textarea, .form-conteiner__stek > input, .form-conteiner__geo > input,  .form-conteiner__level > select, .form-conteiner__online > input, .form-conteiner__age > input{
     margin-top: 10px;
     background-color: #C4C4C4;
     font-size: 18px;
 }
 .form-conteiner__online > input, .form-conteiner__age > input{
     width: 25px;
-}
-.form-conteiner__level{
-    background-color: #C4C4C4;
-    font-size: 18px;
-    margin-top: 10px;
 }
 
 /* медиа запросы для слайдера */
