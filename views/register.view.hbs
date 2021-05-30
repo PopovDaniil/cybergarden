@@ -2,10 +2,11 @@
 <div class="content">
     <form class="spaces" id="members" method="POST" action="">
         <div class="user-is">
-            <span class="user-is__text" onclick="setForm(1)">
+            <span class="user-is__text">
                 Участник
             </span>
         </div>
+        <div onclick="setForm()">Я организатор</div>
         <div class="login">
             <span class="login__login-text">Логин:</span> <br>
             <input type="text" class="login__login-input" name="login">
@@ -56,6 +57,7 @@
                 Организатор
             </span>
         </div>
+        <div onclick="setForm()">Я организатор</div>
         <div class="login">
             <span class="login__login-text">Логин:</span> <br>
             <input type="text" class="login__login-input">

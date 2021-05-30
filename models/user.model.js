@@ -5,7 +5,10 @@ const userSchema = new mongoose.Schema({
     password: String,
     name: String,
     email: String,
-    level: Number,
+    level: {
+        type: String,
+        get: level => (level == 1) ? 'Junior' : (level == 2) ? 'Middle' : 'Senior'
+    },
     socialLink: String,
     githubLink: String,
     stack: String,
